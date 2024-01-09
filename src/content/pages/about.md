@@ -56,7 +56,7 @@ blocks:
       * Raleno PLV 116
       * Canon EOS 6D
     _template: BodySimple
-  - title: Contacto
+  - title: Contact
     description: "Please use the form below, be sure to include any relevant details."
     visible: true
     _template: contactForm
