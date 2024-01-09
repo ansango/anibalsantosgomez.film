@@ -44,7 +44,9 @@ export const LightBoxContent: FC = () => {
         {...useSwipeLightBox()}
         src={currentItem?.src || ""}
         alt="lightbox"
-        className={cn("h-full object-fill max-h-[80vh] w-full hover:cursor-grabbing rounded-sm")}
+        className={cn(
+          "h-full object-fill max-h-[93dvh] w-full hover:cursor-grabbing rounded-sm max-w-[80dvw]"
+        )}
         srcSet={srcSet}
         custom={direction}
         initial={{ opacity: 0 }}
