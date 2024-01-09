@@ -1,7 +1,10 @@
 ---
 title: About
+description: >-
+  My life project is to explore new possibilities or remember other ways of
+  doing things, and enjoy the process.
 blocks:
-  - src: "https://asg-cms.s3.eu-west-3.amazonaws.com/00-assets/avatar.jpeg"
+  - src: 'https://asg-cms.s3.eu-west-3.amazonaws.com/00-assets/avatar.jpeg'
     repeat: 3
     _template: HeroCaptionRepeat
   - content: >
@@ -57,7 +60,8 @@ blocks:
       * Canon EOS 6D
     _template: BodySimple
   - title: Contact
-    description: "Please use the form below, be sure to include any relevant details."
+    description: 'Please use the form below, be sure to include any relevant details.'
     visible: true
     _template: contactForm
 ---
+
