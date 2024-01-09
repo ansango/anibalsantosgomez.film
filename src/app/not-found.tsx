@@ -8,11 +8,11 @@ export default function NotFound() {
           <span>
             404 - <br className="sm:hidden" />
             <br className="hidden md:block" />
-            Página no encontrada
+            Not Found
           </span>
         </h1>
         <p>
-          <Balancer>La página que estás buscando no existe.</Balancer>
+          <Balancer>The page you are looking for does not exist.</Balancer>
         </p>
       </div>
     </main>
