@@ -74,7 +74,7 @@ export const ContactForm: FC<Props> = ({ description, title = "Contact" }) => {
         <form className="grid max-w-screen-lg grid-cols-12 gap-6" onSubmit={handleSubmit(onSubmit)}>
           <label className="col-span-12 md:col-span-6">
             <span>Name</span>
-            <input type="text" placeholder="" {...register("fullName")} />
+            <input type="text" placeholder="Your full name" {...register("fullName")} />
             <span className={`${errors.fullName?.message ? "error-text" : "helper-text"}`}>
               {errors.fullName?.message ?? ""}
             </span>
@@ -89,7 +89,7 @@ export const ContactForm: FC<Props> = ({ description, title = "Contact" }) => {
           </label>
           <label className="col-span-12">
             <span>Message</span>
-            <textarea rows={4} placeholder="¿Cómo puedo ayudarte?" {...register("subject")} />
+            <textarea rows={4} placeholder="How can I help you?" {...register("subject")} />
             <span className={`${errors.subject?.message ? "error-text" : "helper-text"}`}>
               {errors.subject?.message ?? ""}
             </span>
