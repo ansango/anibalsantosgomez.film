@@ -19,7 +19,7 @@ export type Props = {
   description?: string;
 };
 
-export const ContactForm: FC<Props> = ({ description, title = "Contacto" }) => {
+export const ContactForm: FC<Props> = ({ description, title = "Contact" }) => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const {
     register,
@@ -37,15 +37,15 @@ export const ContactForm: FC<Props> = ({ description, title = "Contacto" }) => {
     (data) => {
       setIsSubmitting(true);
       toast.promise(onPostContactForm(data), {
-        loading: "Enviando mensaje...",
+        loading: "Sending message...",
         success: () => {
           reset();
           setIsSubmitting(false);
-          return "Mensaje enviado correctamente";
+          return "Message sent";
         },
         error: () => {
           setIsSubmitting(false);
-          return "Error al enviar el mensaje";
+          return "Error sending message";
         },
       });
     },
@@ -73,7 +73,7 @@ export const ContactForm: FC<Props> = ({ description, title = "Contacto" }) => {
         {description && <p>{description}</p>}
         <form className="grid max-w-screen-lg grid-cols-12 gap-6" onSubmit={handleSubmit(onSubmit)}>
           <label className="col-span-12 md:col-span-6">
-            <span>Nombre</span>
+            <span>Name</span>
             <input type="text" placeholder="" {...register("fullName")} />
             <span className={`${errors.fullName?.message ? "error-text" : "helper-text"}`}>
               {errors.fullName?.message ?? ""}
@@ -88,7 +88,7 @@ export const ContactForm: FC<Props> = ({ description, title = "Contacto" }) => {
             </span>
           </label>
           <label className="col-span-12">
-            <span>Asunto</span>
+            <span>Message</span>
             <textarea rows={4} placeholder="¿Cómo puedo ayudarte?" {...register("subject")} />
             <span className={`${errors.subject?.message ? "error-text" : "helper-text"}`}>
               {errors.subject?.message ?? ""}
@@ -99,7 +99,7 @@ export const ContactForm: FC<Props> = ({ description, title = "Contacto" }) => {
               <div>
                 <label className="items-center">
                   <input type="checkbox" {...register("privacy")} />
-                  <span className="ml-2 text-sm">Acepto la política de privacidad</span>
+                  <span className="ml-2 text-sm">I accept privacy policy</span>
                   <span className={`block ${errors.privacy?.message ? "error-text" : ""}`}>
                     {errors.privacy?.message ?? ""}
                   </span>

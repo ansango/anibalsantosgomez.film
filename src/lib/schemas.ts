@@ -2,21 +2,21 @@ import { z } from "zod";
 
 export const ContactFormSchema = z.object({
   fullName: z.string().min(3, {
-    message: "El nombre debe tener al menos 3 caracteres",
+    message: "Must be at least 3 chars",
   }),
   email: z.string().email({
-    message: "El email no es válido",
+    message: "Must be a valid email",
   }),
   subject: z
     .string()
     .min(10, {
-      message: "El asunto debe tener al menos 10 caracteres",
+      message: "Must be at least 10 chars",
     })
     .max(1000, {
-      message: "El asunto no puede tener más de 1000 caracteres",
+      message: "Must be less than 1000 chars",
     }),
   privacy: z.boolean().refine((value) => value === true, {
-    message: "Debes aceptar la política de privacidad",
+    message: "Privacy must be accepted",
   }),
 });
 
