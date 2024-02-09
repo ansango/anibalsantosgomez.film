@@ -122,10 +122,11 @@ const EnglishMonths = [
  * => "El 1 de january de 2021"
  */
 
-export const replaceSpanishMonthsByEnglish = (title: string) => {
-  const titleArray = title?.split(" ");
-  const month = titleArray?.[1];
-  const monthIndex = SpanishMonths?.indexOf(month);
-  const newMonth = EnglishMonths?.[monthIndex];
-  return title.replace(month, newMonth);
-};
+export const replaceSpanishMonthsByEnglish = (title: string) =>
+  title
+    ?.split(" ")
+    .map((word) => {
+      const index = SpanishMonths.indexOf(word);
+      return index !== -1 ? EnglishMonths[index] : word;
+    })
+    .join(" ");
