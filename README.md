@@ -1,36 +1,104 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# anibalsantosgomez.film
 
-## Getting Started
+**anibalsantosgomez.film** is a portfolio website showcasing analog photography. Built with a modern tech stack, the site leverages Next.js and various libraries to deliver a smooth and interactive user experience.
 
-First, run the development server:
+## Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Photo Gallery**: Display high-quality analog photographs in a visually appealing gallery.
+- **Interactive Animations**: Enhance user experience with smooth animations using Framer Motion.
+- **Contact Form**: Allows visitors to get in touch through a contact form powered by Nodemailer.
+- **Content Management**: Easily manage site content with TinaCMS.
+- **Validation**: Ensure robust data handling with Zod.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Tech Stack
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Next.js**: Framework for building the React application.
+- **Framer Motion**: For animations and interactive effects.
+- **Nodemailer**: For handling contact form submissions.
+- **Sonner**: For user notifications and alerts.
+- **TinaCMS**: For content management and site editing.
+- **Zod**: For schema validation and data handling.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Installation
 
-## Learn More
+1. **Clone the Repository**:
+   Clone this repository to your local machine.
+   ```sh
+   git clone https://github.com/ansango/anibalsantosgomez.film.git
+   ```
 
-To learn more about Next.js, take a look at the following resources:
+2. **Install Dependencies**:
+   Navigate to the project directory and install the necessary dependencies.
+   ```sh
+   cd anibalsantosgomez.film
+   npm install
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+3. **Set Up Environment Variables**:
+   Create a `.env.local` file in the root directory of the project and add your environment variables as follows:
+   ```env
+   # ENV
+   NEXT_PUBLIC_TINA_CLIENT_ID=***
+   TINA_TOKEN=***
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+   # AWS S3 config
+   S3_REGION=***
+   S3_BUCKET=***
+   S3_ACCESS_KEY=***
+   S3_SECRET_KEY=***
+   NEXT_PUBLIC_BUCKET_URL=***
 
-## Deploy on Vercel
+   # Nodemailer config
+   NODEMAILER_PASS=***
+   NODEMAILER_USER=***
+   NODEMAILER_HOST=***
+   NODEMAILER_PORT=***
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+   # Public URI
+   NEXT_PUBLIC_WEB_URI=***
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+   # Google Analytics
+   NEXT_PUBLIC_GA_MEASUREMENT_ID=***
+   ```
+
+4. **Run the Development Server**:
+   Start the development server to see the application in action.
+   ```sh
+   npm run dev
+   ```
+
+   The application will be available at [http://localhost:3000](http://localhost:3000).
+
+## Usage
+
+1. **View the Portfolio**:
+   Navigate through the portfolio to explore the gallery of analog photographs.
+
+2. **Contact Form**:
+   Use the contact form to get in touch or send inquiries. Ensure your email configuration is set up correctly to handle submissions.
+
+3. **Content Management**:
+   Edit and manage content using TinaCMS, accessible via the provided interface.
+
+## Deployment
+
+For deployment, you can use Vercel or any other preferred hosting provider. Follow their respective documentation for deployment instructions.
+
+## Contributing
+
+Contributions are welcome! Please fork the repository and submit a pull request for any improvements or bug fixes.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Acknowledgments
+
+- [Next.js](https://nextjs.org/) for the framework.
+- [Framer Motion](https://www.framer.com/api/motion/) for animations.
+- [Nodemailer](https://nodemailer.com/) for email handling.
+- [Sonner](https://sonner.dev/) for notifications.
+- [TinaCMS](https://tinacms.org/) for content management.
+- [Zod](https://zod.dev/) for schema validation.
+
+For any questions or support, please open an issue in the repository.
